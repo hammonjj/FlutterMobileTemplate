@@ -1,0 +1,41 @@
+name: flutter_mobile_template
+description: "Flutter Mobile Project Template"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: any
+  flutter_svg: ^2.0.10+1
+  shared_preferences: ^2.2.3
+  dio: ^5.5.0+1
+  flutter_guid: ^0.3.1
+  json_annotation: ^4.9.0
+  envied: ^0.5.4+1
+  go_router: ^14.2.3
+  riverpod: ^2.5.1
+  flutter_localization: ^0.2.1
+  # flutter_localizations:????
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  mockito: ^5.4.0
+  build_runner: ^2.4.11
+  http_mock_adapter: ^0.6.1
+  json_serializable: ^6.8.0
+  envied_generator: ^0.5.4+1
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - .env
