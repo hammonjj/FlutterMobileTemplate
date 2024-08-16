@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_template/providers/localization/localization_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../providers/localization_provider.dart';
 
 // Create extension method for dealing with localization like I did in the nymble project
-import '../l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SettingsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(title: const Text(AppLocalizations.of(context)!.hello)),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.hello_world)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

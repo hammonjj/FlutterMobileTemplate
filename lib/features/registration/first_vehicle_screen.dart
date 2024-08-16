@@ -3,15 +3,13 @@ import 'package:flutter_mobile_template/providers/registration/registration_prov
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class RegistrationScreen extends ConsumerWidget {
-  const RegistrationScreen({super.key});
-
+class FirstVehiclenScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final registrationState = ref.watch(registrationProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Registration')),
+      appBar: AppBar(title: const Text('First Vehicle ')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -22,3 +22,6 @@ analyzer:
   exclude:
     - test/**/*.mocks.dart # Exclude generated mocks
     - lib/**/**.g.dart # Exclude generated response files
+
+  plugins:
+    - custom_lint

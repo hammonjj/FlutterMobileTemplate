@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_template/features/home/home_screen.dart';
-import 'package:flutter_mobile_template/features/registration/registration_screen.dart';
-import 'package:flutter_mobile_template/features/settings/routes.dart';
-import 'package:flutter_mobile_template/features/settings/settings_screen.dart';
+import 'features/home/home_screen.dart';
+import 'features/registration/registration_screen.dart';
+import 'features/registration/routes.dart';
+import 'features/settings/settings_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+
+import 'providers/localization/localization_provider.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -18,15 +21,17 @@ class MyApp extends ConsumerWidget {
       ),
       GoRoute(
         path: '/registration',
-        builder: (context, state) => RegistrationScreen(),
+        builder: (context, state) => const RegistrationScreen(),
+        routes: registrationRoutes(),
       ),
       GoRoute(
         path: '/settings',
         builder: (context, state) => SettingsScreen(),
-        routes: settingsRoutes(),
       ),
     ],
   );
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
