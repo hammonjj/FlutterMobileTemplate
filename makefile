@@ -1,4 +1,4 @@
-.PHONY: files integration lint
+.PHONY: files integration lint icons splash
 
 files:
 	dart run build_runner build --delete-conflicting-outputs
@@ -8,3 +8,9 @@ integration:
 
 lint:
 	dart run custom_lint
+
+icons:
+	flutter pub run flutter_launcher_icons:main
+
+splash:
+	flutter pub run flutter_native_splash:create
