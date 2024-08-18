@@ -15,6 +15,7 @@ linter:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     prefer_single_quotes: true
     directives_ordering: true
+    lines_longer_than_80_chars: false
     
 
 # Additional information about this file can be found at
@@ -27,3 +28,6 @@ analyzer:
 
   plugins:
     - custom_lint
+
+code_style:
+  lines_longer_than_120_chars: true

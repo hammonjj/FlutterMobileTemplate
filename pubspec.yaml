@@ -23,6 +23,9 @@ dependencies:
   flutter_signin_button: ^2.0.0
   flutter_bloc: ^8.1.6
   equatable: ^2.0.5
+  font_awesome_flutter: ^9.2.0
+  supabase_flutter: ^2.6.0
+  google_sign_in: ^6.2.1
 
 flutter_launcher_icons:
   android: "launcher_icon"

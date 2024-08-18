@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter_guid/flutter_guid.dart';
-import 'package:flutter_mobile_template/features/authentication/user_model.dart';
+import 'package:flutter_mobile_template/global_blocs/authentication/models/user_model.dart';
 
 class UserRepository {
   User? _user;

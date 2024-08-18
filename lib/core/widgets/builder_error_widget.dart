@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobile_template/core/theme.dart';
 
 class BuilderErrorWidget extends StatelessWidget {
   final FlutterErrorDetails details;
@@ -8,6 +9,7 @@ class BuilderErrorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: theme,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Error Occurred'),

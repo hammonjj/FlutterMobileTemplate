@@ -7,6 +7,13 @@ sealed class RegistrationEvent extends Equatable {
   List<Object> get props => [];
 }
 
-final class LoginRequested extends RegistrationEvent {}
+final class LoginRequested extends RegistrationEvent {
+  final AuthenticationProviders provider;
+
+  const LoginRequested({required this.provider});
+
+  @override
+  List<Object> get props => [provider];
+}
 
 final class RegisterRequested extends RegistrationEvent {}

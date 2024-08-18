@@ -7,12 +7,9 @@ abstract class Env {
   @EnviedField(varName: 'ENVIRONMENT')
   static const String environment = _Env.environment;
 
-  @EnviedField(varName: 'API_BASE_URL')
-  static const String apiBaseUrl = _Env.apiBaseUrl;
+  @EnviedField(varName: 'SUPABASE_URL')
+  static const String supabaseUrl = _Env.supabaseUrl;
 
-  @EnviedField(varName: 'API_RETRY_ATTEMPTS')
-  static const int apiRetryAttempts = _Env.apiRetryAttempts;
-
-  @EnviedField(varName: 'API_RETRY_DELAY')
-  static const int apiRetryDelay = _Env.apiRetryDelay;
+  @EnviedField(varName: 'SUPABASE_ANON_KEY')
+  static const String supabaseAnonKey = _Env.supabaseAnonKey;
 }
