@@ -1,4 +1,5 @@
 {
     "@@locale": "es",
-    "hello_world": "Hola Mundo"
+    "hello_world": "Hola Mundo",
+    "choose_language": "Elegir Idioma"
 }

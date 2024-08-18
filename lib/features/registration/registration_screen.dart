@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_template/features/registration/registration_provider.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_signin_button/button_builder.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
-import 'package:go_router/go_router.dart';
 
-class RegistrationScreen extends ConsumerWidget {
+class RegistrationScreen extends StatelessWidget {
   const RegistrationScreen({super.key});
 
   /// Show a simple "___ Button Pressed" indicator
@@ -20,7 +17,7 @@ class RegistrationScreen extends ConsumerWidget {
 
   /// Normally the signin buttons should be contained in the SignInPage
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
