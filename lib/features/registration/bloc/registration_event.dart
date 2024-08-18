@@ -6,3 +6,7 @@ sealed class RegistrationEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+final class LoginRequested extends RegistrationEvent {}
+
+final class RegisterRequested extends RegistrationEvent {}

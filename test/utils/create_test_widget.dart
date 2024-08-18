@@ -1,16 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+// Usage:
+// void main() {
+//   testWidgets('MyWidget displays data correctly', (WidgetTester tester) async {
+//     await tester.pumpWidget(
+//       createTestWidget(
+//         MyWidget(),
+//         blocProviders: [
+//           BlocProvider(
+//             create: (_) => MyBloc(),
+//           ),
+//         ],
+//       ),
+//     );
+
+//     expect(find.text('Expected Text'), findsOneWidget);
+//   });
+// }
 
 Widget createTestWidget(
   Widget child, {
   List<NavigatorObserver>? observers,
-  List<Override>? overrides,
+  List<BlocProvider>? blocProviders,
   List<String>? routes,
 }) {
-  return ProviderScope(
-    overrides: overrides ?? [],
+  return MultiBlocProvider(
+    providers: blocProviders?.isNotEmpty == true ? blocProviders! : [],
     child: MaterialApp(
       localizationsDelegates: const [
         AppLocalizations.delegate,

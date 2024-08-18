@@ -2,15 +2,14 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_mobile_template/providers/authentication/authentication_repository.dart';
-import 'package:flutter_mobile_template/providers/user/user_model.dart';
-import 'package:flutter_mobile_template/providers/user/user_repository.dart';
+import 'package:flutter_mobile_template/features/authentication/authentication_repository.dart';
+import 'package:flutter_mobile_template/features/authentication/user_model.dart';
+import 'package:flutter_mobile_template/features/authentication/user_repository.dart';
 
 part 'authentication_event.dart';
 part 'authentication_state.dart';
 
-class AuthenticationBloc
-    extends Bloc<AuthenticationEvent, AuthenticationState> {
+class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> {
   AuthenticationBloc({
     required AuthenticationRepository authenticationRepository,
     required UserRepository userRepository,
@@ -37,9 +36,7 @@ class AuthenticationBloc
           case AuthenticationStatus.authenticated:
             final user = await _tryGetUser();
             return emit(
-              user != null
-                  ? AuthenticationState.authenticated(user)
-                  : const AuthenticationState.unauthenticated(),
+              user != null ? AuthenticationState.authenticated(user) : const AuthenticationState.unauthenticated(),
             );
           case AuthenticationStatus.unknown:
             return emit(const AuthenticationState.unknown());
