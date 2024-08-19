@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_mobile_template/core/enums.dart';
-import 'package:flutter_mobile_template/global_blocs/authentication/repositories/authentication_repository.dart';
 import 'package:flutter_mobile_template/global_blocs/authentication/models/user_model.dart';
+import 'package:flutter_mobile_template/global_blocs/authentication/repositories/authentication_repository.dart';
 import 'package:flutter_mobile_template/global_blocs/authentication/repositories/user_repository.dart';
 
 part 'authentication_event.dart';
